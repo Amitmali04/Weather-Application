@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react'
 
-import icon from "../assets/icons/fog.png"
 import {useDate} from '../Utils/useDate'
 
 
@@ -53,15 +52,15 @@ const WeatherCard = ({
   return (
     <div className='w-[35rem] min-w-[35rem] h-[400px] glassCard p-4'>
     <div className="px-2">
-<h1 className='font-semibold text-white'>Current weather</h1>
-<p className='text-white'>{date} <span>{time}</span></p>
+<h1 className='font-bold'>Current weather</h1>
+<p className='font-semibold'>{date} <span>{time}</span></p>
     </div>
-    <div className='flex w-full justify-between, items-center mt-12 mb-4'>
+    <div className='flex w-full justify-between, items-center mt-12 mb-4 gap-4'>
         <img src={icon} alt="weather_icon" />
-        <p className='font-bold text-4xl flex justify-between items-center' >{temperature} &deg;C</p>
-        <div className='px-20 text-2xl font-bold'>
+        <p className='font-bold text-4xl flex justify-between items-center gap-4' >{temperature} &deg;C</p>
+        <p className='text-2xl font-bold text-end'>
         {conditions}
-      </div>
+      </p>
       </div>
       <div className='font-bold text-center text-xl'>
         {place}

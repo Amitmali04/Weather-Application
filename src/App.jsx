@@ -33,7 +33,7 @@ function App() {
             sealevelpressure={weather.sealevelpressure}
           />
 
-          <WeatherMap lati={latitude} long={longitude} />
+          <WeatherMap lati={latitude} long={longitude} temperature={weather.temp} />
         </div>
 
         <div className="glassCard py-2">
